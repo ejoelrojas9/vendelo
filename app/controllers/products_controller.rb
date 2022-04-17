@@ -8,6 +8,10 @@ class ProductsController < ApplicationController
   end
 end
 
+def new
+  @product = Product.new
+end
+
  #Modelo -> consultas, validaciones, relación
 
   #Vista -> devolder al usuario html, pdf, csv, json
