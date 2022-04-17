@@ -6,11 +6,28 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
   end
+
+  def new
+    @product = Product.new
+  end
+  
+  def create
+    @product = Product.new(product_params)  
+    if @product.save
+      redirect_to products_path
+    else
+      render :new
+    end  
+    #pp @product  ## pp muestra por pantalla el contenido de una variable
+  end
+  
+  private
+  def product_params
+    params.require(:product).permit(:title, :description, :price)
+  end
+
 end
 
-def new
-  @product = Product.new
-end
 
  #Modelo -> consultas, validaciones, relación
 
