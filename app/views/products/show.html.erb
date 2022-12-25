@@ -2,4 +2,6 @@
 
 <p class='description'><%= @product.description %></p>
 
-<span class='price'><%= @product.price %>$</span>
+<span class='price'><%= @product.price %>$</span><br><br>
+
+<%= link_to 'Product edit', edit_product_path(@product) %>

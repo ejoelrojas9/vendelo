@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get '/products', to: 'products#index'  #Index muestra un conjunto de productos
   get '/products/:id', to: 'products#show', as: :product #Show muestra un unico producto en concreto  
   get '/products/:id/edit', to: 'products#edit', as: :edit_product #Edit permite editar un producto 
+  patch '/products/:id', to: 'products#update'
 end

@@ -25,7 +25,16 @@ class ProductsController < ApplicationController
 
   def edit
     @product = Product.find params[:id]
-    
+  end
+
+  def update
+    @product = Product.find params[:id]
+
+    if @product.update(product_params)
+      redirect_to product_path, notice: 'Updated product'
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
   
   private
