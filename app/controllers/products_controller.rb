@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController 
+  # before_actiom :set_prpduct only:
+
   def index
     @products = Product.all    
   end
@@ -20,10 +22,19 @@ class ProductsController < ApplicationController
     end  
     #pp @product  ## pp muestra por pantalla el contenido de una variable
   end
+
+  def edit
+    @product = Product.find params[:id]
+    
+  end
   
   private
   def product_params
     params.require(:product).permit(:title, :description, :price)
+  end
+
+  def set_prpduct
+    @product = Product.find params[:id]
   end
 
 end
