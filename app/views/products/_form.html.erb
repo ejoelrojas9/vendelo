@@ -1,6 +1,6 @@
 <%= form_with model: @product do |form| %>
   <% @product.errors.full_messages.each do |error| %>
-    <div> - <%= error %></div><br> 
+    <div> - <%= error %></div>
   <% end %>
   <table>
     <tr>
@@ -16,6 +16,15 @@
     <tr>
       <td><%= form.label :price %></td>
       <td><%= form.number_field :price %></td>
+    </tr>
+
+    <tr>
+      <td><%= form.label :photo %></td>
+      <td><%= form.file_field :photo %></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><%= image_tag @product.photo, width: 100 if @product.photo.attached? %></td>
     </tr>
   </table><br>
 
