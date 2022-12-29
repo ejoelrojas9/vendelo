@@ -1,0 +1,19 @@
+es:
+  activerecord:
+    models:
+      product: Producto
+      attributes:
+      product:
+        title: 'Titulo'
+        description: 'Descripción'
+        price: 'Precio'
+        photo: 'Foto'
+  common:
+    confirm: '¿Estas seguro?'
+  products:
+    edit:
+      title: 'Editar producto'
+    new:
+      title: 'Añadir producto'
+    index:
+      title: 'Productos:'
