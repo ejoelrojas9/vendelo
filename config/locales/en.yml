@@ -7,6 +7,10 @@ en:
   common:
     confirm: 'Are you sure?'
     back: 'Back to categories'
+  shared:
+    header:
+      add: 'Add product'
+      categories: 'Categories'
   products:
     edit:
       title: 'Edit product'
@@ -25,12 +29,18 @@ en:
       edit: 'Edit'
       delete: 'Delete'
     index:
-      title: 'Categories'
+      title: 'Categories list'
       new: 'Add category'
     edit: 
       title: 'Edit category'
     new: 
       title: 'New category'
+    create:
+      created: 'Category was successfully created'
+    update:
+      updated: 'Category was successfully update'
+    destroy:
+      destroyed: 'Category was successfully destroyed'
 
 
  

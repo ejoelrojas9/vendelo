@@ -1,11 +1,7 @@
-class CategoriesController < ApplicationController
+ class CategoriesController < ApplicationController
 
   def index
     @categories = Category.all
-  end
-
-  def show
-    category
   end
 
   def new
@@ -18,26 +14,26 @@ class CategoriesController < ApplicationController
 
   def create
     @category = Category.new(category_params)
+    
     if @category.save
-      format.html { redirect_to categories_url, notice: "Category was successfully created." }
+      redirect_to categories_url, notice: t('.created')
     else
-      format.html { render :new, status: :unprocessable_entity }
+      render :new, status: :unprocessable_entity
     end
   end
 
   def update
     if category.update(category_params)
-      format.html { redirect_to categories_url, notice: "Category was successfully updated." }
+      redirect_to categories_url, notice: t('.updated')
     else
-      format.html { render :edit, status: :unprocessable_entity }
+      render :edit, status: :unprocessable_entity
     end
   end
 
   def destroy
     category.destroy
-    respond_to do |format|
-      format.html { redirect_to categories_url, notice: "Category was successfully destroyed." }
-    end
+    
+    redirect_to categories_url, notice: t('.destroyed')
   end
 
   private
