@@ -18,6 +18,7 @@ en:
       title: 'New product'
     index:
       title: 'Products:'
+      all: 'All'
     create: 
       created: 'Product created'
     update:

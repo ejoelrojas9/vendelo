@@ -17,3 +17,4 @@ es:
       title: 'Añadir producto'
     index:
       title: 'Productos:'
+      all: 'Todos'
