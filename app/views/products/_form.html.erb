@@ -19,6 +19,11 @@
     </tr>
 
     <tr>
+      <td><%= form.label :Category %></td>
+      <td><%= form.collection_select :category_id, Category.all.order(name: :asc), :id, :name %></td>
+    </tr>
+
+    <tr>
       <td><%= form.label :photo %></td>
       <td><%= form.file_field :photo %></td>
     </tr>
