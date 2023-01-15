@@ -1,0 +1,19 @@
+<h1><%= t('.title') %></h1>
+<div>
+  <%= link_to t('.new'), new_category_path %>
+</div><br>
+
+ <table>
+    <thead>
+      <th>Name</th>
+      <th>Edit</th>
+      <th>Action  </th>
+
+    </thead>
+    <tbody>
+      <%= render partial: 'category', collection: @categories %>    
+    </tbody>
+  </table>
+
+
+ 
