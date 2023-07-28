@@ -33,6 +33,9 @@ gem "redis", "~> 4.0"
 # Postgresql fulltextsearch
 gem "pg_search", "~> 2.3"
 
+# Gem for pagination
+gem "pagy"
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
