@@ -1,46 +1,49 @@
-
 #
 # To learn more, please read the Rails Internationalization guide
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
   common:
-    confirm: 'Are you sure?'
-    back: 'Back to categories'
+    confirm: "Are you sure?"
+    back: "Back to categories"
   shared:
     header:
-      add: 'Add product'
-      categories: 'Categories'
+      add: "Add product"
+      categories: "Categories"
   products:
     edit:
-      title: 'Edit product'
+      title: "Edit product"
     new:
-      title: 'New product'
+      title: "New product"
     index:
-      title: 'Products:'
-    create: 
-      created: 'Product created'
+      title: "Products:"
+      all: "All"
+      min_price: "Min Price"
+      max_price: "Max Price"
+      query_text: "What do you want to search?"
+      expensive: "Expensive first"
+      cheapest: "Cheaper first"
+      newest: "Recently added"
+    create:
+      created: "Product created"
     update:
-      updated: 'Updated product'
+      updated: "Updated product"
     destroy:
-      destroyed: 'Product deleted'
+      destroyed: "Product deleted"
   categories:
     category:
-      edit: 'Edit'
-      delete: 'Delete'
+      edit: "Edit"
+      delete: "Delete"
     index:
-      title: 'Categories list'
-      new: 'Add category'
-    edit: 
-      title: 'Edit category'
-    new: 
-      title: 'New category'
+      title: "Categories list"
+      new: "Add category"
+    edit:
+      title: "Edit category"
+    new:
+      title: "New category"
     create:
-      created: 'Category was successfully created'
+      created: "Category was successfully created"
     update:
-      updated: 'Category was successfully update'
+      updated: "Category was successfully update"
     destroy:
-      destroyed: 'Category was successfully destroyed'
-
-
- 
+      destroyed: "Category was successfully destroyed"
