@@ -3,6 +3,27 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+  app_name: "SellIT"
+  meta_title: "Buy and sell second hand products!"
+  activerecord:
+    models:
+      product: Product
+    attributes:
+      product:
+        title: "Title"
+        description: "Description"
+        price: "Price"
+        photo: "Photo"
+    errors:
+      models:
+        product:
+          attributes:
+            title:
+              blank: "can't be blank"
+            description:
+              blank: "can't be blank"
+            price:
+              blank: "can't be blank"
   common:
     confirm: "Are you sure?"
     back: "Back to categories"
