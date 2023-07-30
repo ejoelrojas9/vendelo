@@ -68,3 +68,7 @@ en:
       updated: "Category was successfully update"
     destroy:
       destroyed: "Category was successfully destroyed"
+  authentication:
+    users:
+      create:
+        created: "Your account has been created successfully"
