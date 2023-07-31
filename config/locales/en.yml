@@ -8,22 +8,20 @@ en:
   activerecord:
     models:
       product: Product
+      user: User
+      category: Category
     attributes:
       product:
         title: "Title"
         description: "Description"
         price: "Price"
         photo: "Photo"
-    errors:
-      models:
-        product:
-          attributes:
-            title:
-              blank: "can't be blank"
-            description:
-              blank: "can't be blank"
-            price:
-              blank: "can't be blank"
+      user:
+        email: "Email"
+        username: "Username"
+        password: "Password"
+      category:
+        name: "Name"
   common:
     not_logged_in: "You have to login or create an account before"
     confirm: "Are you sure?"
@@ -31,6 +29,9 @@ en:
   shared:
     header:
       add: "Add product"
+      login: "Login"
+      register: "Register"
+      logout: "Logout"
       categories: "Categories"
   products:
     edit:
@@ -77,3 +78,5 @@ en:
       create:
         created: "login successfully"
         failed: "Invalid login"
+      destroy:
+        destroyed: "Session ended. Bye!"
