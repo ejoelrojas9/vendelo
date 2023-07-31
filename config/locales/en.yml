@@ -72,3 +72,7 @@ en:
     users:
       create:
         created: "Your account has been created successfully"
+    sessions:
+      create:
+        created: "login successfully"
+        failed: "Invalid login"
