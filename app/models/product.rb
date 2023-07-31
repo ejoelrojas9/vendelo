@@ -8,6 +8,7 @@ class Product < ApplicationRecord
   validates :price, presence: true
 
   belongs_to :category
+  belongs_to :user, default: -> { Current.user }
   
   pg_search_scope :search_full_text, against: [
     [:title, 'A'],  # Field and priority

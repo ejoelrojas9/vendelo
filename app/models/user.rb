@@ -14,6 +14,8 @@ class User < ApplicationRecord
   }
   validates :password, length: { minimum: 6  }
 
+  has_many :products, dependent: :destroy   # Dependent :destroy indica que se borre todo lo que le correponde al usuario si se borra
+
   before_save :downcase_attributes
 
   private
