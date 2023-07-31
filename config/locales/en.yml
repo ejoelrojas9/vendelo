@@ -25,6 +25,7 @@ en:
             price:
               blank: "can't be blank"
   common:
+    not_logged_in: "You have to login or create an account before"
     confirm: "Are you sure?"
     back: "Back to categories"
   shared:
