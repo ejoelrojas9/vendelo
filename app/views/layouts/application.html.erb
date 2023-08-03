@@ -13,9 +13,11 @@
   </head>
 
   <body>
-    <div class="bg-light mt-5 margin-right-4">
+    <div class="mt-5 bg-light">
       <%= render '/shared/header' %>
       <%= render '/shared/flash' %>
+    </div>
+    <div class="bg-dark text-white mt-3">
       <%= yield %>
     </div>
   </body>
