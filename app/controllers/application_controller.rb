@@ -1,5 +1,11 @@
 class ApplicationController < ActionController::Base
   include Pagy::Backend
+
+  class NotAutohrizedError < StandardError; end
+
+  rescue_from NotAutohrizedError do
+    redirect_to products_path, alert: t('common.not_authorized')   # Se ejecuta redirec cuando no es is_allowed 
+  end
   
   around_action :switch_locale
   before_action :set_current_user
@@ -22,5 +28,15 @@ class ApplicationController < ActionController::Base
 
   def protect_pages
     redirect_to new_session_path, alert: t('common.not_logged_in') unless Current.user    # Si no hay usuario logueado redirecciona a new_session_path
+  end
+
+  def authorize! record = nil
+    is_allowed = if record     # Comprueba si hay un registro hace esta acción
+      record.user_id == Current.user.id
+    else
+      Current.user.admin?
+    end
+
+    raise NotAutohrizedError unless is_allowed    # raise hace una excecpción del nuevo error cuando no este permitido
   end
 end
