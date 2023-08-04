@@ -3,8 +3,9 @@ Rails.application.routes.draw do
     resources :users, only: [ :new, :create ], path: '/register', path_names: { new: '/' }
     resources :sessions, only: [ :new, :create, :destroy ], path: '/login', path_names: { new: '/' }
   end
-  resources :categories
-  # resources :categories, except: :show
+
+  resources :users, only: :show, path: '/user', param: :username   # Con el path: '/user' se cambia de plural a singular
+  resources :categories, except: :show
   resources :products, path: '/'
 
   

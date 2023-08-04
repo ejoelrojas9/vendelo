@@ -1,0 +1,16 @@
+<div class="mt-3 mx-5">
+    <div class="login-title mt-4 mx-3">
+      <h1><%= @user.username %></h1>
+      <%= t('.detail') %>
+    </div>
+    <div class="mt-3">
+      <%= turbo_frame_tag "products-#{@pagy.page}", class: 'products' do %>
+        <%= render partial: 'products/product', collection: @products %>
+        <%= turbo_frame_tag "products-#{@pagy.next}", class: 'products', 
+        src: pagy_url_for(@pagy, @pagy.next),
+        loading: :lazy if @pagy.next %>
+      <% end %>
+    </div>
+    <br>
+
+</div>

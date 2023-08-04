@@ -11,7 +11,7 @@ class Product < ApplicationRecord
   belongs_to :user, default: -> { Current.user }
 
   def owner?
-    user_id == Current.user.id
+    user_id == Current.user&.id
   end
   
   pg_search_scope :search_full_text, against: [

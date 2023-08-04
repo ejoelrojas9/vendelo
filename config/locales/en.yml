@@ -34,6 +34,10 @@ en:
       register: "Register"
       logout: "Logout"
       categories: "Categories"
+  users:
+    show:
+      detail: "Check this user details"
+      not_found: "User no found"
   products:
     edit:
       title: "Edit product"
@@ -54,6 +58,8 @@ en:
       updated: "Updated product"
     destroy:
       destroyed: "Product deleted"
+    show:
+      view_profile: "All products of"
   categories:
     category:
       edit: "Edit"
