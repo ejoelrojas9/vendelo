@@ -34,6 +34,9 @@ en:
       register: "Register"
       logout: "Logout"
       categories: "Categories"
+  users:
+    show:
+      detail: "Check this user details"
   products:
     edit:
       title: "Edit product"
