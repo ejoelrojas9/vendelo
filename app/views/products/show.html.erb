@@ -8,13 +8,13 @@
 
   <%= link_to "#{t('.view_profile')} #{@product.user.username}", user_path(@product.user.username), class:'mx-1' %>
 
-  <% if @product.favorites.empty? %>
-    <%= link_to '❤️', favorites_path(product_id: @product.id), data:{
-      turbo_method: :post
-    }, class:'mx-1' %>
-  <% else %>
+  <% if @product.favorite %>
     <%= link_to '💔', favorite_path(product_id: @product.id), data:{
       turbo_method: :delete
+    }, class:'mx-1' %>
+  <% else %>
+    <%= link_to '❤️', favorites_path(product_id: @product.id), data:{
+      turbo_method: :post
     }, class:'mx-1' %>
   <% end %>
 </div>
