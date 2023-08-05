@@ -1,4 +1,18 @@
-<div class="mt-3 mx-5">
+<%= link_to 'Edit product', edit_product_path(@product), class:'mx-1' if @product.owner? %>
+
+<%= link_to 'Delete Product', product_path(@product), data:{
+  turbo_method: :delete,
+  turbo_confirm: t('common.confirm') 
+  }, class:'mx-1' if @product.owner? %>
+
+<%= link_to "#{t('.view_profile')} #{@product.user.username}", user_path(@product.user.username), class:'mx-1' %>
+
+<%= link_to "#{t('.view_profile')} #{@product.user.username}", favorites_path(@product.user.username), class:'mx-3' %>
+
+<%= link_to '❤️', favorites_path(product_id: @product.id), data:{
+  turbo_method: :post
+}, class:'mx-1' %>
+<div class="mx-5">
     <br><br><%= image_tag @product.photo, width: 150 if @product.photo.attached? %>
   <div class="login-title">
     <h1 class='title'><%= @product.title %></h1>
@@ -8,13 +22,6 @@
 
     <span class='price'><%= @product.price %>$</span><br><br>
 
-    <%= link_to 'Edit product', edit_product_path(@product) if @product.owner? %><br><br>
-
-    <%= link_to 'Delete Product', product_path(@product), data:{
-      turbo_method: :delete,
-      turbo_confirm: t('common.confirm') 
-    } if @product.owner? %>
-    <%= link_to "#{t('.view_profile')} #{@product.user.username}", user_path(@product.user.username) %>
   </div>
 
 

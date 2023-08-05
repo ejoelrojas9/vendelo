@@ -9,6 +9,7 @@ class Product < ApplicationRecord
 
   belongs_to :category
   belongs_to :user, default: -> { Current.user }
+  has_many :favorite, dependent: :destroy
 
   def owner?
     user_id == Current.user&.id
