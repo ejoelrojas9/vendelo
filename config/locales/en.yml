@@ -60,6 +60,8 @@ en:
       destroyed: "Product deleted"
     show:
       view_profile: "All products of"
+      edit: "Edit product"
+      delete: "Delete Product"
   categories:
     category:
       edit: "Edit"

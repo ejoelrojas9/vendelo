@@ -16,6 +16,8 @@ class User < ApplicationRecord
 
   has_many :products, dependent: :destroy   # Dependent :destroy indica que se borre todo lo que le correponde al usuario si se borra
 
+  has_many :favorites, dependent: :destroy
+
   before_save :downcase_attributes
 
   private

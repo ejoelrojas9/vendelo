@@ -1,5 +1,6 @@
 class Product < ApplicationRecord
   include PgSearch::Model
+  include Favoritable
 
   has_one_attached  :photo
 
