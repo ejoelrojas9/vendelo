@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   def show
     user
-    @pagy, @products = pagy_countless(FindProducts.new.call({ user_id: @user_id }).load_async, items: 12)
+    # @pagy, @products = pagy_countless(FindProducts.new.call({ user_id: @user_id }).load_async, items: 12)
   end
 
   private
