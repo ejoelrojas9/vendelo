@@ -7,9 +7,9 @@ en:
   meta_title: "Buy and sell second hand products!"
   activerecord:
     models:
-      product: Product
-      user: User
-      category: Category
+      product: "Product"
+      user: "User"
+      category: "Category"
     attributes:
       product:
         title: "Title"
@@ -26,7 +26,7 @@ en:
     not_logged_in: "You have to login or create an account before"
     confirm: "Are you sure?"
     back: "Back to categories"
-    not_authorized: "You don't have permissions for this action"
+    not_authorized: "You dont have permissions for this action"
   shared:
     header:
       add: "Add product"
@@ -34,6 +34,7 @@ en:
       register: "Register"
       logout: "Logout"
       categories: "Categories"
+      favorites: "My favorites"
   users:
     show:
       detail: "Check this user details"
@@ -89,3 +90,6 @@ en:
         failed: "Invalid login"
       destroy:
         destroyed: "Session ended. Bye!"
+  favorites:
+    index:
+      title: "My favorites"
